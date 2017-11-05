@@ -47,8 +47,8 @@ myManageHook = composeAll
 
 
 myStartupHook = do
-    spawn "$HOME/bin/xrandr.sh"
-    spawn "$HOME/bin/trayer.sh"
+    spawn "$HOME/.xmonad/xrandr.sh"
+    spawn "$HOME/.xmonad/trayer.sh"
     spawn "telegram-desktop"
     spawn "dropbox"
     spawn "pnmixer"

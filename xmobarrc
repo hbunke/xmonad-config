@@ -1,0 +1,30 @@
+Config { font = "xft:Liberation Sans:size=12:antialias=true"
+        , additionalFonts = []
+        , textOffset = 18
+        , iconOffset = -1
+        , overrideRedirect = True
+        , pickBroadest = False
+        , hideOnStart = False
+        , lowerOnStart = True
+        , iconRoot = "."
+        , alpha = 255
+        , borderColor = "black"
+        , border = TopB
+        , bgColor = "black"
+        , fgColor = "darkgrey"
+        , position = BottomP 0 75
+        , persistent = True
+        , allDesktops = True
+        , commands = [ Run Weather "CYVR" ["-t","<tempC>C","-L","18","-H","25","--normal","green","--high","red","--low","lightblue"] 36000
+                        , Run Network "enp0s25" ["-L","0","-H","32","--normal","green","--high","red"] 10
+                        , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
+                        , Run Memory ["-t","Mem: <used> "] 10
+                        , Run Com "uname" ["-n","-r"] "" 36000
+                        , Run DiskU [("/", "<used>/<size>")] ["-L", "20","-H","50", "-m", "1", "-p", "3"] 60
+                        , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                        , Run StdinReader
+                        ]
+        , sepChar = "%"
+        , alignSep = "}{"
+        , template = "%StdinReader% | %cpu% | %memory% | %disku% | %enp0s25% | %uname%}{<fc=#ff6347>%date%</fc>  "
+        }
