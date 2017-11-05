@@ -22,7 +22,7 @@ myConfig = defaultConfig
     `additionalKeys`
     [ ((mod1Mask, xK_F1), spawn "firefox")
         ,((mod1Mask, xK_F2), spawn "chromium")
-        ,((mod1Mask, xK_F3), spawn "xfce4-terminal")
+        ,((mod1Mask, xK_F3), spawn "firefox --new-window https://mailbox.org")
         ,((mod1Mask, xK_F4), kill)
         ,((mod1Mask, xK_Right), windows W.focusDown)
         ,((mod1Mask, xK_Left), windows W.focusUp)
@@ -51,5 +51,6 @@ myStartupHook = do
     spawn "$HOME/bin/trayer.sh"
     spawn "telegram-desktop"
     spawn "dropbox"
+    spawn "pnmixer"
 
 
