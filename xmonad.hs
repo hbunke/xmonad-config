@@ -50,6 +50,7 @@ myStartupHook = do
     spawn "$HOME/.xmonad/xrandr.sh"
     spawn "$HOME/.xmonad/trayer.sh"
     --spawn "telegram-desktop"
+    spawn "feh --bg-scale ~/Dropbox/Flowerbed.jpg"
     spawn "signal-desktop"
     spawn "dropbox"
     spawn "pnmixer"
