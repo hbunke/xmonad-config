@@ -31,7 +31,7 @@ myConfig = defaultConfig
     }
 
     `additionalKeys`
-    [ ((mod1Mask, xK_F1), spawn "chromium")
+    [ ((mod1Mask, xK_F1), spawn "google-chrome-stable")
         ,((mod1Mask, xK_F2), spawn "firefox")
         ,((mod1Mask, xK_F3), spawn "brave")
         ,((mod1Mask, xK_F4), kill)
