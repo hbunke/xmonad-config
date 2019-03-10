@@ -1,4 +1,4 @@
-Config { font = "xft:Liberation Sans:size=12:antialias=true"
+Config { font = "xft:Roboto:size=12:antialias=true"
         , additionalFonts = []
         , textOffset = 18
         , iconOffset = -1
@@ -16,7 +16,7 @@ Config { font = "xft:Liberation Sans:size=12:antialias=true"
         , persistent = True
         , allDesktops = True
         , commands = [ Run Weather "CYVR" ["-t","<tempC>C","-L","18","-H","25","--normal","green","--high","red","--low","lightblue"] 36000
-                        , Run Network "enp0s25" ["-L","0","-H","32","--normal","green","--high","red"] 10
+                        , Run Network "enp0s25" ["-t", "<dev>: <rx> | <tx>","-L","0","-H","32","--normal","green","--high","red","-S", "True"] 10
                         , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
                         , Run Memory ["-t","Mem: <used> "] 10
                         , Run Com "uname" ["-n","-r"] "" 36000
@@ -26,5 +26,5 @@ Config { font = "xft:Liberation Sans:size=12:antialias=true"
                         ]
         , sepChar = "%"
         , alignSep = "}{"
-        , template = "%StdinReader% | %cpu% | %memory% | %disku% | %enp0s25% | %uname%}{<fc=#ff6347>%date%</fc>  "
+        , template = "%StdinReader% | %cpu% | %memory% | %disku% | %uname%}{<fc=#ff6347>%date%</fc>  "
         }
